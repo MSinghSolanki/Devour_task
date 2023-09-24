@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutorial</title>
+  <!-- Fonts -->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- CSS -->
+  <link href="productdetails.css" rel="stylesheet" />
+  <link href="devour.css" rel="stylesheet" />
+  <meta name="robots" content="noindex,follow" />
+</head>
+
+<body>
+
+
+
+<!-- Navbar -->
+<nav>
+  <div class="container">
+       <div id="header">
+         <a href="./devour.html"><img src="./images/logo2.png" alt="logo"/></a>
+           <div>
+           <ul id="navbar">
+             <li><a  href="./devour.html">Home</a></li>
+             <li><a class="active" href="./products.html">Shop</a></li>
+             <li><a  href="./about.html">About Us</a></li>
+             <li><a href="./contactus.html">Contact Us</a></li>
+             <li id="login-link"><a href="./login.html">Login</a></li>
+             <li id="logout-link" style="display: none;"><a href="./devour.html" id="logout-button">Logout</a></li>
+             <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i><span style="color: black;" id="cart-item-count">0</span>
+            </a></li>
+             <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+           </ul>
+         </div>
+         <div id="mobile">
+          <a href="./cart.html" id="mobile-cart-icon">
+            <i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i>
+            <span style="color: black;" id="cart-item-count">0</span>
+          </a>
+           <i id="bar" class="fas fa-outdent"></i>
+         </div>
+       </div>
+       </div>
+   
+ </nav>
+
+
+
+
+
+  <!-- Details -->
+  <div class="containers">
+    
+    <div class="left-column">
+      <img id="product-image" src="" alt="" />
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+      <!-- Product Description -->
+      <div id="toaster-container"></div>
+      <div class="product-description">
+        <h1></h1>
+        <p></p>
+      </div>
+
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+        <div class="cable-config">
+          <span>Clothing</span>
+
+          <div class="cable-choose">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Pricing -->
+      <div class="product-price">
+        <span></span>
+      </div>
+      <div class="product-cart">
+        <button class="add-to-cart-button cart-btn" id="add-to-cart-button-id">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="devour.js">
+    // Navbar
+
+const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+const close = document.getElementById('close');
+
+if(bar){
+  bar.addEventListener('click',()=>{
+    nav.classList.add('active')
+  })
+}
+
+if(close){
+  close.addEventListener('click',()=>{
+    nav.classList.remove('active');
+  })
+}
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <script src="productd.js">
+  
+  </script>
+</body>
+
+</html>

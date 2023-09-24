@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="products.css"/>
+    <link href="devour.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="container">
+         <div id="header">
+           <a href="./devour.html"><img src="./images/logo2.png" alt="logo"/></a>
+             <div>
+             <ul id="navbar">
+               <li><a  href="./devour.html">Home</a></li>
+               <li><a class="active" href="./products.html">Shop</a></li>
+               <li><a  href="./about.html">About Us</a></li>
+               <li><a href="./contactus.html">Contact Us</a></li>
+               <li id="login-link"><a href="./login.html">Login</a></li>
+               <li id="logout-link" style="display: none;"><a href="./devour.html" id="logout-button">Logout</a></li>
+               <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i></a></li>
+               <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+             </ul>
+           </div>
+           <div id="mobile">
+               <a href="./cart.html"><i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i></a>
+             <i id="bar" class="fas fa-outdent"></i>
+           </div>
+         </div>
+         </div>
+     
+   </nav>
+
+
+
+
+
+<!-- Banner-->
+
+<div class="banner1">
+        <div class="container">
+        <div class="banner-content">
+        <h1>Black Friday Sale</h1>
+        <p>Up to 50% off on selected items!</p>
+        <a href="#" class="btns">Shop Now</a>
+    </div>
+</div>
+</div>
+
+
+
+<div class="container">
+    <div id="product-list" class="product-container">
+
+    </div>
+</div>
+
+
+<!-- <script src="./devour.js"></script> -->
+    <script>
+
+        async function fetchAndDisplayProducts() {
+    try {
+        const response = await fetch("products.json");
+        if (!response.ok) {
+            throw new Error('Fetch request failed');
+        }
+        const products = await response.json();
+
+        const productContainer = document.getElementById('product-list');
+
+        products.forEach(product => {
+            const productCard = createProductCard(product);
+            productContainer.appendChild(productCard);
+        });
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+
+// // Function to add a product to localStorage
+// function addToLocalStorage(product) {
+
+//     const existingData = JSON.parse(localStorage.getItem('productData')) || [];
+    
+//     existingData.push(product);
+
+//     localStorage.setItem('productData', JSON.stringify(existingData));
+// }
+
+function addToLocalStorage(product) {
+    localStorage.setItem('productData', JSON.stringify(product));
+}
+// Function to handle when a product card is clicked
+function onProductCardClick(product) {
+    if (product && product.title) {
+        addToLocalStorage(product);
+    window.location.href="./productdetails.html"
+    } else {
+        console.error('Invalid product data:', product);
+    }
+}
+
+
+function createProductCard(product) {
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-card');
+
+    productCard.innerHTML = `
+        <div class"pro-container ">
+            <div class="pro">
+                <div class="image-container"> 
+            <img  src="${product.image}" alt="${product.title}">
+     </div>
+        <div class="des">
+            <span>${product.category}</span>
+            <h4>${product.title}</h4>
+           <div class="star">
+            <i class='fas fa-star'></i>
+            <i class='fas fa-star'></i>
+            <i class='fas fa-star'></i>
+            <i class='fas fa-star'></i>
+            <i class='fas fa-star'></i>
+            </div>
+            <h3>$${product.price}</h3>
+       
+        </div>
+        </div>
+        </div>
+
+      
+    `;
+
+    productCard.addEventListener('click', () => {
+        onProductCardClick(product);
+    });
+
+    return productCard;
+}
+
+// Call the function to fetch and display products when the page loads
+window.addEventListener('load', fetchAndDisplayProducts);
+
+    </script>
+</body>
+</html>

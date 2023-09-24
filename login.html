@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="loginbackground-gridContainer">
+    <div class="container">
+        <div id="toaster-container"></div>
+        <div class="form-container">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="./singup.html">Sign up</a></p>
+        </div>
+    </div>
+</div>
+    <script src="./devour.js"></script>
+    <script>
+   function showToast(message) {
+    const toasterContainer = document.getElementById('toaster-container');
+    const toaster = document.createElement('div');
+    toaster.className = 'toaster';
+    toaster.innerText = message;
+    toasterContainer.appendChild(toaster);
+    toaster.offsetHeight;
+
+    toaster.style.opacity = 1;
+    setTimeout(() => {
+        toaster.style.opacity = 0; 
+        setTimeout(() => {
+            toaster.remove(); 
+        }, 500);
+    }, 5000); 
+}
+
+        
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    const enteredUsername = document.getElementById('username').value;
+    const enteredPassword = document.getElementById('password').value;
+
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+      
+        const token = Math.random();
+        localStorage.setItem('token', token);
+        showToast("Login successful! You Are Logged In.");
+        setTimeout (()=>{
+           
+   window.location.href = "./devour.html"
+        },5000)
+    } else {
+        showToast("Enter Valid Credentails");
+    }
+});
+
+
+    </script>
+</body>
+</html>

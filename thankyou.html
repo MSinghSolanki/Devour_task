@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link href="devour.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 100px;
+        }
+
+        h3 {
+            color: #555;
+            margin: 20px 0;
+        }
+
+        h4 {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+             <div id="header">
+               <a href="./devour.html"><img src="./images/logo3.png" alt="logo" loading="lazy"></a>
+                 <div>
+                 <ul id="navbar">
+                   <li><a class="active" href="./devour.html">Home</a></li>
+                   <li><a href="./products.html">Shop</a></li>
+                   <li><a  href="./about.html">About Us</a></li>
+                   <li><a href="./contactus.html">Contact Us</a></li>
+                   <li id="login-link"><a href="./login.html">Login</a></li>
+                   <li id="logout-link" style="display: none;"><a href="./devour.html" id="logout-button">Logout</a></li>
+                   <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i>
+                   </a></li>
+                   <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+                 </ul>
+               </div>
+               <div id="mobile">
+                 <a href="./cart.html" id="mobile-cart-icon">
+                     <i class="fa-solid fa-bag-shopping fa-xl cartbtn"></i>
+                   </a>
+                 <i id="bar" class="fas fa-outdent"></i>
+               </div>
+             </div>
+             </div>
+         
+       </nav>
+     
+
+
+
+
+
+
+    <h1>Thanks For Choosing Us!!!</h1>
+    <h3>Your Order Will Be Delivered Soon</h3>
+    <h4>Have a Nice Day</h4>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "devour.html";
+        }, 4000); 
+    </script>
+    <script src="devour.js"></script>
+</body>
+</html>

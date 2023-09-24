@@ -1,0 +1,181 @@
+
+/* Navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    max-width: 1240px;
+    margin: 0px auto;
+
+}
+
+
+/*Banner  */
+
+.banner1 {
+  background-image: url('https://images.pexels.com/photos/16516/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.banner-content {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btns {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF0000; /* Change to your desired button color */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btns:hover {
+    background-color: #CC0000; /* Change to a darker shade for hover effect */
+}
+
+/* Products */
+#product-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+}
+
+#product-list .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.02) ;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product-list .pro:hover{
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.06) ;
+}
+
+#product-list .pro .image-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2fdf2; 
+    border-radius: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-list .pro img {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    border-radius: 20px; 
+}
+
+.product-list .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.pro .des span{
+   color: #606063;
+   font-size: 12px;
+}
+#product-list h4{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.pro .star i{
+    font-size: 12px ;
+    color: rgb(243,181,25) ;   
+}
+
+.pro .des h3{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+.pro .des .cart {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e8f6ea;
+    font-weight: 600;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+@media only screen and (max-width: 376px) {
+    #product-list{
+      padding-left: 60px;
+        margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 20px;
+  
+    }
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #product-list{
+      padding-left: 60px;
+        margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  
+    }
+   
+}
+

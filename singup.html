@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="login.css"/>
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+    <h1>Signup</h1>
+    <form id="signup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Signup</button>
+    </form>
+</div>
+</div>
+<script src="./devour.js"></script>
+    <script>
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (username === "" || email === "" || password === "") {
+        alert("Please fill all the fields");
+    } else {
+        // Store the values in localStorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+
+        // Redirect to the login page
+        window.location.href = "./login.html";
+    }
+});
+
+    </script>
+</body>
+</html>

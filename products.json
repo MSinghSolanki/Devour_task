@@ -1,0 +1,145 @@
+[
+    {
+      "id": 1,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f1.jpg"
+    },
+   
+    {
+      "id": 2,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f2.jpg"
+    },
+   
+    {
+      "id": 3,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f3.jpg"
+    },
+   
+    {
+      "id": 4,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f4.jpg"
+    },
+   
+    {
+      "id": 5,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f5.jpg"
+    },
+   
+    {
+      "id": 6,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f6.jpg"
+    },
+   
+    {
+      "id": 7,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f7.jpg"
+    },
+   
+    {
+      "id": 8,
+      "category":"Clothing",
+      "title":"SHIRT",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/f8.jpg"
+    },
+   
+    {
+      "id": 9,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n1.jpg"
+    },
+   
+    {
+      "id": 10,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n2.jpg"
+    },
+   
+    {
+      "id": 11,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n3.jpg"
+    },
+   
+    {
+      "id": 12,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n4.jpg"
+    },
+   
+    {
+      "id": 13,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n5.jpg"
+    },
+   
+    {
+      "id": 14,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n6.jpg"
+    },
+   
+    {
+      "id": 15,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n7.jpg"
+    },
+   
+    {
+      "id": 16,
+      "category":"Clothing",
+      "title":"SHirt",
+      "price": "$10.99",
+      "description":"The preferred choice of a vast range of acclaimed Mens. Sturdy headband and on-ear cushions suitable for live performance ",
+      "image":"./images/products/n8.jpg"
+    }
+  ]
