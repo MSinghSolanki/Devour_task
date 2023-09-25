@@ -8,9 +8,28 @@
 
   /* Cart page */
 
+  #toaster-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.toaster {
+    background-color: #08be2a;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    opacity: 0; /* Start with opacity set to 0 */
+    animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 4.5s; /* Apply fade-in and fade-out animations */
+}
 
 
-
+#cart{
+  overflow-x: auto;
+}
   #cart table{
     width: 100%;
     border-collapse: collapse;

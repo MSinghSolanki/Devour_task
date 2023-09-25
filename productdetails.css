@@ -35,7 +35,7 @@ html, body {
   
   /* Left Column */
    .left-column img {
-    width: 66%;
+    width: 50%;
     position: absolute;
     left: 0;
     top: 0;

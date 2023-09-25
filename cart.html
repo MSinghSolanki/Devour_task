@@ -17,7 +17,7 @@
     <nav>
         <div class="container">
              <div id="header">
-               <a href="./devour.html"><img src="./images/logo2.png" alt="logo"/></a>
+               <a href="./devour.html"><img src="./images/logo3.png" alt="logo"/></a>
                  <div>
                  <ul id="navbar">
                    <li><a  href="./devour.html">Home</a></li>
@@ -42,7 +42,9 @@
 
 
     <!-- Cart -->
+    <div id="toaster-container"></div>
     <div class="container">
+       
         <div id="cart" class="section-p1">
             <table class="product-cart">
                 <thead>
@@ -174,6 +176,22 @@
     <script src="./devour.js"></script>
     <script>
 
+function showToast(message) {
+    const toasterContainer = document.getElementById('toaster-container');
+    const toaster = document.createElement('div');
+    toaster.className = 'toaster';
+    toaster.innerText = message;
+    toasterContainer.appendChild(toaster);
+    toaster.offsetHeight;
+
+    toaster.style.opacity = 1;
+    setTimeout(() => {
+        toaster.style.opacity = 0; 
+        setTimeout(() => {
+            toaster.remove(); 
+        }, 500);
+    }, 5000); 
+}
         var count = 1;
 
         function increaseQuantity(index) {
@@ -304,14 +322,15 @@
         const itemPrice = parsePrice(productData.price);
         totalPayment += itemPrice * quantity;
     });
-
-    // Display an alert with the payment amount and a thank you message
-    alert(`Your payment of $${totalPayment.toFixed(2)} is done. Thanks for Purchasing!`);
-
+    showToast(`Your payment of $${totalPayment.toFixed(2)} is done. Thanks for Purchasing!`);
+    
+    setTimeout(() => {
+    
+ window.location.href = "./thankyou.html"
+}, 4000);
     
     localStorage.removeItem("productDatas");
 
- window.location.href = "./thankyou.html"
 }
 
         const productDatas = getCartData();
